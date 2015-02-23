@@ -49,6 +49,5 @@ end
 group :production do
   gem 'pg' # dont want sqlite in production
   gem 'rails_12factor'
-  gem 'unicorn'
 end
 
