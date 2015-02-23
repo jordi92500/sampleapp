@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head>
-
-</head>
-
-</html>
- <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		  <title> <%= yield(:title) %> | RoR Sample App</title>
 		  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		  
 		  <%= csrf_meta_tags %>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -46,6 +38,7 @@
   <div class="text-center">
   	<h1>New title for <%= yield(:title) %></h1>
   	<p>Find me in app/views/static_pages/<%= yield(:title) %>.html.erb</p>
+		<%= yield %>
   </div>
   
 </div><!-- /.container -->
