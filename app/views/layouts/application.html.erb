@@ -30,7 +30,7 @@
         <li class="<%= 'active' if current_page?('/about') %>"><%= link_to "About", about_path %></li>
         <li class="<%= 'active' if current_page?('/help') %>"><%= link_to "Help", help_path %></li>
         <li class="<%= 'active' if current_page?('/contact') %>"><%= link_to "Contact", contact_path %></li>
-        <li class="<%= 'active' if current_page?('/login') %>"><%= link_to "Log in", login_path %></li>
+        <li class="<%= 'active' if current_page?('/login') %>"><%= link_to "Log In", login_path %></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -48,11 +48,12 @@
 
 <footer class="footer">
   <div class="container">
-    <ul class="col-xs-offset-4 col-xs-4 ">
-      <li class="col-xs-3"><%= link_to "Home", :controller => 'static_pages', :action =>'home' %></li>
-      <li class="col-xs-3"><%= link_to "About", :controller => 'static_pages', :action =>'about' %></li>
-      <li class="col-xs-3"><%= link_to "Help", :controller => 'static_pages', :action =>'help' %></li>
-      <li class="col-xs-3"><%= link_to "Log in", :controller => 'static_pages', :action =>'login' %></li>
+    <ul class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+      <li class="col-cs-offset-1 col-xs-2"><%= link_to "Home", home_path %></li>
+      <li class="col-xs-2"><%= link_to "About", about_path %></li>
+      <li class="col-xs-2"><%= link_to "Help", help_path %></li>
+      <li class="col-xs-2"><%= link_to "Contact", contact_path %></li>
+      <li class="col-xs-2"><%= link_to "Sign up", signup_path %></li>
     </ul>
   </div>
 
