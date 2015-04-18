@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get 'login' => 'static_pages#login'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
+  resources :users
+  
+  match "*path", to: "static_pages#home", via: :all
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
