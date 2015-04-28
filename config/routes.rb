@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
  
 
+  get 'sessions/new'
+
   get 'static_pages' => 'static_pages#home'
   
   root :to => 'static_pages#home'
@@ -9,12 +11,18 @@ Rails.application.routes.draw do
   get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
-  get 'login' => 'static_pages#login'
+
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
   resources :users
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   
   match "*path", to: "static_pages#home", via: :all
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

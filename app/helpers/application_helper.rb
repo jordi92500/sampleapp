@@ -1,5 +1,5 @@
 module ApplicationHelper
-
+	
 	def full_title(page_title='')
 		base_title='RoR Sample App'
 		if page_title.empty?
@@ -7,5 +7,9 @@ module ApplicationHelper
 		else
 			base_title= "#{page_title} | #{base_title}"
 		end
+	end
+	
+	def redirect
+		redirect_to home_url
 	end
 end
