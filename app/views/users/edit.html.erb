@@ -1,9 +1,4 @@
-<% if @user.id!=current_user.id %>
-	<script type="text/javascript">
-		window.location.href='/home'
-	</script>
-<% else %>
-
+<div class="text-center">
 	<% provide(:title, "Edit user") %>
 	<h1>Update your profile</h1>
 	  <div class="row">
@@ -22,7 +17,7 @@
 	        <%= f.label :password_confirmation, "Confirmation", class: "label-1" %>
 	        <%= f.password_field :password_confirmation, class: "input-align form-control" %>
 
-	        <%= f.submit "Create my account", class: "btn btn-primary input-align" %>
+	        <%= f.submit "Update my profile", class: "btn btn-primary input-align" %>
 	      <% end %>
 		    <div class="gravatar_edit">
 		      <%= gravatar_for @user %>
@@ -30,5 +25,4 @@
 		    </div>
 	  </div>
 	</div>
-
-<% end %>
+</div>

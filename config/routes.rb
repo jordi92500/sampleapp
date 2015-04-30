@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
   get 'edit' => 'users#edit'
-  patch 'edit' => 'users#change'
   resources :users
 
   get    'login'   => 'sessions#new'

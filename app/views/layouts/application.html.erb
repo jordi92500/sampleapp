@@ -33,13 +33,14 @@
               <li class="<%= 'active' if current_page?('/contact') %>"><%= link_to "Contact", contact_path %></li>
 
               <% if logged_in? %>
+                <li class="<%= 'active' if current_page?('/users') %>"><%= link_to "Users", users_path %></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Account<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                       <li><%= link_to "profile", user_path(current_user) %></li>
-                      <li><%= link_to "Settings", '#' %></li>
+                      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                       <li class="divider"></li>
                       <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                   </ul>
@@ -56,9 +57,9 @@
           <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
           <% end %>
-          <div class="text-center">
+          
         		<%= yield %>  
-          </div>
+          
          <%= debug(params) if Rails.env.development? %> 
       </div><!-- /.container -->
       
