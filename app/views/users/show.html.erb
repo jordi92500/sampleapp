@@ -1,6 +1,7 @@
+
 <% if @user.id!=current_user.id %>
 	<script type="text/javascript">
-		window.location.href='/home'
+		window.location.href= '<%= user_path(current_user) %>'
 	</script>
 <% else %>
 	<% provide(:title, @user.name) %>
