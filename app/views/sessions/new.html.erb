@@ -7,9 +7,11 @@
 
 	      <%= f.label :email, class: "label-1" %>
 	      <%= f.email_field :email, class: "input-align form-control" %>
-
+      	  
 	      <%= f.label :password, class: "label-1" %>
+	      <%= link_to "(forgot password)", new_password_reset_path %>
 	      <%= f.password_field :password, class: "input-align form-control" %>
+	      
 
 	     <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
 	     	<div class="col-md-1">

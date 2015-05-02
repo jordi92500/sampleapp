@@ -2,17 +2,21 @@ Rails.application.routes.draw do
 
  
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   get 'sessions/new'
 
   get 'static_pages' => 'static_pages#home'
-  
+
   root :to => 'static_pages#home'
 
   get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
-
   get 'contact' => 'static_pages#contact'
+
   get 'signup' => 'users#new'
   get 'edit' => 'users#edit'
   resources :users
@@ -21,7 +25,11 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   
-  match "*path", to: "static_pages#home", via: :all
+
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+
+  #match "*path", to: "static_pages#home", via: :all
 
 
 
