@@ -28,6 +28,7 @@
 			  </div>
 
 		<% else %>
+		<div class="text-center">
 			<%= link_to(signup_path, class: "btn btn-primary btn-success") do %>
 			<span class="glyphicon glyphicon-ok-sign"></span> Sign up now !
 			<% end %>
@@ -35,6 +36,7 @@
 			<%= link_to(login_path, class: "btn btn-primary") do %>
 			<span class="glyphicon glyphicon-ok-sign"></span> Log In
 			<% end %>
+		</div>
 		<% end %>
 	</div>
 </div>
