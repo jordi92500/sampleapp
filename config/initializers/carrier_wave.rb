@@ -1,6 +1,6 @@
 
 
-if Rails.env.production?
+#if Rails.env.production?
 require 'rubygems'
 require 'fog'
 
@@ -9,4 +9,4 @@ storage = Fog::Storage.new({
   :provider   => 'Local'
 })
 
-end
+#end
