@@ -12,4 +12,6 @@ module ApplicationHelper
 	def redirect
 		redirect_to home_url
 	end
+
+
 end

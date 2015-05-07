@@ -1,0 +1,8 @@
+<% if @feed_items.any? %>
+  <ol class="microposts" id="my-posts">
+    <%= render @feed_items %>
+  </ol>
+  <div id="infinite-scrolling" style="visibility: hidden">
+  	<%= will_paginate @feed_items %>
+  </div>
+<% end %>

@@ -1,3 +1,4 @@
+
 /*!
  * jQuery JavaScript Library v1.11.2
  * http://jquery.com/
@@ -10814,6 +10815,10 @@ return jQuery;
   }
 
 })( jQuery );
+(function() {
+
+
+}).call(this);
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -12766,6 +12771,14 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   })
 
 }(jQuery);
+(function() {
+
+
+}).call(this);
+(function() {
+
+
+}).call(this);
 (function() {
 
 
