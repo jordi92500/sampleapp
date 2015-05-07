@@ -1,12 +1,11 @@
 
 
 #if Rails.env.production?
-require 'rubygems'
-require 'fog'
+#require 'rubygems'
+#require 'fog'
 
-storage = Fog::Storage.new({
-  :local_root => '~/fog',
-  :provider   => 'Local'
-})
+#CarrierWave.configure do |config|
+ # config.cache_dir = "#{Rails.root}/tmp/uploads"
+#end
 
 #end
